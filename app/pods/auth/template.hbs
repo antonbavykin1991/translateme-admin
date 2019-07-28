@@ -1,0 +1,58 @@
+<div class="flex flex-col flex-1">
+  <Navbar />
+
+  <div class="flex flex-1 flex-row">
+    <div class="flex flex-col flex-1 min-h-full px-6 py-6">
+      <div class="flex flex-col flex-1 bg-white mx-auto rounded-sm w-full sm:w-sm mx-auto p-6">
+        <h1 class="text-lg text-grey-darker mb-6">Create account</h1>
+
+        <UiLabel class="flex flex-col mb-4">
+          <span class="mb-2">First Name:</span>
+          <UiInput
+            @type="text"
+            @value={{this.firstName}}
+            @onChange={{action (mut this.firstName)}}
+            class="text-grey-darker"
+          />
+        </UiLabel>
+
+        <UiLabel class="flex flex-col mb-4">
+          <span class="mb-2">Last Name:</span>
+          <UiInput
+            @type="text"
+            @value={{this.lastName}}
+            @onChange={{action (mut this.lastName)}}
+            class="text-grey-darker"
+          />
+        </UiLabel>
+
+        <UiLabel class="flex flex-col mb-4">
+          <span class="mb-2">E-mail:</span>
+          <UiInput
+            @type="email"
+            @value={{this.email}}
+            @onChange={{action (mut this.email)}}
+            class="text-grey-darker"
+          />
+        </UiLabel>
+
+        <UiLabel class="flex flex-col mb-4">
+          <span class="mb-2">Password:</span>
+          <UiInput
+            @type="password"
+            @value={{this.password}}
+            @onChange={{action (mut this.password)}}
+            class="text-grey-darker"
+          />
+        </UiLabel>
+
+        <div class="flex flex-row justify-center my-8">
+          <UiButton
+            @title="Save"
+            class="flex justify-center items-center h-10 w-64 text-white bg-blue rounded text-sm"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
