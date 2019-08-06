@@ -1,0 +1,25 @@
+<UiContainer>
+  <h2 class="mb-8">Jobs</h2>
+
+  <div class="flex w-sm flex-col">
+    <UiLabel class="flex flex-col mb-4">
+      <span class="mb-2">First Name:</span>
+      <UiInput
+        @type="text"
+        @value={{this.firstName}}
+        @onChange={{action (mut this.firstName)}}
+        class="text-grey-darker"
+      />
+    </UiLabel>
+
+    <UiLabel class="flex flex-col mb-4">
+      <span class="mb-2">Last Name:</span>
+      <UiInput
+        @type="text"
+        @value={{this.lastName}}
+        @onChange={{action (mut this.lastName)}}
+        class="text-grey-darker"
+      />
+    </UiLabel>
+  </div>
+</UiContainer>

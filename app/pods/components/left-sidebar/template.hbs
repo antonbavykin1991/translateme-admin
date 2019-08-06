@@ -1,7 +1,15 @@
 <div class="flex flex-col w-80 pl-6 py-6">
   <div class="sticky pin-t flex flex-col h-screen-16 bg-white rounded-sm p-6 overflow-y-auto">
-    <a href="#" class="flex items-end no-underline text-grey-darkest text-sm mb-2">
-      {{fa-icon "home" class="text-2xl mr-2"}} Dashboard
-    </a>
+    {{#link-to 'index' class="flex items-end no-underline text-grey-darkest text-sm mb-6 "}}
+      {{fa-icon "home" class="text-xl mr-2 w-8"}} Dashboard
+    {{/link-to}}
+
+    {{#link-to 'index.jobs' class="flex items-end no-underline text-grey-darkest text-sm mb-6"}}
+      {{fa-icon "globe" class="text-xl mr-2 w-8"}} Jobs
+    {{/link-to}}
+
+    {{#link-to 'index.settings' class="flex items-end no-underline text-grey-darkest text-sm mb-6"}}
+      {{fa-icon "cogs" class="text-xl mr-2 w-8"}} Settings
+    {{/link-to}}
   </div>
 </div>
